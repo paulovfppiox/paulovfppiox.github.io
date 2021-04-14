@@ -1,0 +1,130 @@
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	
+	.myphoto {
+	  border-radius: 50%;
+	}
+	
+	.titulo		 {
+		font-size: 1.5rem;
+		/* color: #437ede; */
+		font-family: "Trebuchet MS";
+		font-weight: bold;
+	}
+	
+	.barraTitulo {
+		background-color: #e8eaed;
+	}
+	.logoFormacao {
+		float: left;		/* Faz div ficar à esquerda */
+		text-align: right;  /* O conteúdo vai à direita */
+		overflow:auto;
+		width:15%;		
+		/* border: 4px #2d89ef solid; */
+	}
+	.itemFormacao {
+		float: left;
+		width: 70%; 
+		display: inline-block;
+		/* border: 4px red solid; */
+	}
+	.endFormacao {
+		float: rigth;
+		width: 15%;
+		height: 100%;
+		display: inline-block;
+		/* border: 4px green solid; */
+	}
+	
+	h3 {
+		font-family: "Trebuchet MS";
+		color: #1D6AA9;
+	}
+	
+	/* ----- INI: Animação ----- */
+	.anim {
+		position: relative;
+		animation-name: moveHeader;
+		animation-duration: 1.2s;
+	}
+	@keyframes moveHeader {
+		0%   { left:-5%; top:0px;}
+		100% { left:0px; top:0px;}
+	}
+	/* ----- FIM: Animação ----- */
+	
+	.formacaoPai {
+		width: 70%;
+	}
+	
+	.sobre 		{
+		margin: auto;
+		width: 50%;
+		/* border: 5px solid #FFFF00;*/
+		padding: 10px;
+		background-color: #e8eaed;
+	}
+	
+	.textoNormal		{
+		font-family: verdana;
+		font-size: 12px;
+		line-height: 1.8; /* Espaço entre linhas */
+		text-indent: 40px;
+		text-align: justify;
+	}
+	
+	.tituloProj			{
+		font-family: "Trebuchet MS";
+		font-size: 15px;
+		font-weight: bold;
+		padding: 10px 10px 10px 10px;
+	}
+	.projFundo			{
+		/* width:300px; */
+		/* height:100px; */
+		background-color: #c6d9ec;
+		border-radius: 10px;
+		padding: 30px 30px 30px 30px; 
+	}
+	
+	/* ----- INI: Projetos ----- */
+	.imgproj				  {
+		width: 80%;
+		height: 80%;
+		opacity: 1;
+		background: rgb(0, 0, 0);
+		/* border: 4px red solid; */
+	}
+	
+	/* ----- INI: Animação FadeIn/FadeOut Img Projetos ----- */
+	.imgprojFadeIn	{
+		animation: fadeIn 3s;
+	}	
+	@keyframes fadeIn {
+		0% {opacity:0.5;}
+		100% {opacity:1;}
+	}
+	.imgprojFadeOut	{
+		animation: fadeOut 3s;
+	}	
+	@keyframes fadeOut {
+		0% {opacity:1;}
+		100% {opacity:0.5;}
+	}
+	
+	
+}
