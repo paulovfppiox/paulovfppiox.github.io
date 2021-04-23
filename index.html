@@ -1,4 +1,3 @@
-<!-- !@punkmo() -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,47 +10,11 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
-  <script>
-  function rolar_para(elemento) 	{
-	  $('html, body').animate({ 		scrollTop: $(elemento).offset().top
-	  }, 2000);
-  }
-  
-	/* Função que detecta quando um elemento está na Viewport */
-	$.fn.isInViewport = function() 		{
-	  var elementTop = $(this).offset().top;
-	  var elementBottom = elementTop + $(this).outerHeight();
-
-	  var viewportTop = $(window).scrollTop();
-	  var viewportBottom = viewportTop + $(window).height();
-
-	  return elementBottom > viewportTop && elementTop < viewportBottom;
-	};
-
-	// Quando realizar o scroll
-	$(window).on('resize scroll', function() {	
-	  $('.imgproj').each(function() {
-		  var idAtivo = $(this).attr('id'); // Id ativos id="IMG1", "IMG2", "IMG3", "IMG4"
-		  
-		  // Caso a div atual esteja na viewport
-		  if ($(this).isInViewport()) 	{	 
-			 $('#' + idAtivo).removeClass('imgprojFadeOut'); // remove o fadeOut
-			 $('#' + idAtivo).addClass('imgprojFadeIn');     // adiciona o fadeIn
-			 // console.log( idAtivo );
-		} else {
-			 $('#' + idAtivo).removeClass('imgprojFadeIn');
-		     $('#' + idAtivo).addClass('imgprojFadeOut');
-			 // console.log( "SAIU!!! - " + idAtivo );
-		}
-	  });
-	});  
-  
-  //
-  </script> <!-- JQUERY -->
+  <script type="text/javascript" src="javascript/website_librarie.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav id='topo' class="navbar navbar-inverse"> <!-- TOPO -->
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -65,6 +28,7 @@
         <li class="active" style="padding-right:40px"><a href="index.html">Home</a></li><>
 		<li><a href="#" style="padding-right:40px" onclick="rolar_para('#sobre')"> Sobre</a></li>
         <li><a href="#" style="padding-right:40px" onclick="rolar_para('#formacao')"> Formação</a></li>
+		<li><a href="#" style="padding-right:40px" onclick="rolar_para('#publicacoes')"> Publicações</a></li>
         <li><a href="#" style="padding-right:40px" onclick="rolar_para('#experiencia')" >Experiência</a></li>
 		<li><a href="ensino.html">Ensino</a></li>
 		<li>
@@ -95,6 +59,11 @@
   </div>
 </nav>
 
+<!-- Botão de rolagem para o Topo -->
+<button onclick="rolar_para('#topo');hideBtnOnTop();" id="myTopoBtn" title="Go to top" style="width:5%; height:10%" >
+<img src="icones/seta_branca.png">
+</button>
+
 <div class="jumbotron" >
   <div class="container text-center">
 	<center><img src="paulo.gif" style="width:12%; height:12%" class="img-responsive myphoto"/></center>
@@ -111,7 +80,10 @@
  
 <!-- SOBRE -->
 <div class="container-fluid bg-3 text-center">    
-  <h3 id="sobre" class="anim" >Sobre</h3><br>
+  <h3 id="sobre" class="anim" >
+	<img src="icones/sobre-icon.png" style="width:2.2%; height:2.2%"/> Sobre
+  </h3>
+  <br>
   <div class="row">
 	  <div class="sobre textoNormal">
       <p>
@@ -126,17 +98,19 @@
   </div>
 </div><br>
 
-<!-- SOBRE -->
+
+<!-- INTERESSE -->
 <div class="container-fluid bg-3 text-center">    
-  <h3 id="areas" class="anim" >Áreas de Interesse</h3><br>
+  <h3 id="areas" class="anim" >
+  <img src="icones/skills-icon.png" style="width:2.2%; height:2.2%"/> Áreas de Interesse
+  </h3><br>
   <div class="row">
 	  <div class="sobre textoNormal">
 	  <ul>
 ​	  <li> Computação Distribuída </li>	
-	  <li> Simulação e Análise de Desempenho de Sistemas em Redes </li>
-	  <li> Serious games </li>
-	  <li> Avaliação de Treinamento em Ambientes Virtuais </li>
 	  <li> Inteligência Artificial e Modelos de Decisão </li>
+	  <li> Computação Gráfica </li>
+	  <li> Serious games </li>
 	  <li> Realidade Virtual (RV) </li>
 		  <ul>
 			  <li>Simuladores Médicos baseados em RV</li>
@@ -147,13 +121,77 @@
   </div>
 </div><br>
 
+<!-- TECNOLOGIAS -->
+<div class="container-fluid bg-3 text-center">    
+	<h3 id="sobre" class="anim" >
+	<img src="icones/skills-icon.png" style="width:2.2%; height:2.2%"/> Tecnologias de Domínio
+	</h3>
+  <br>
+  <div class="row">
+	  <table class="tabelaSkills">
+	  <tr>
+			<th style="width:20%">Tecnologia</th>
+			<th>Domínio</th> 
+	  </tr>
+	  <tr>
+			<td>Unity 3D</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="4.4" ></td>
+	  </tr>
+	  <tr>
+			<td>MySQL</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="4.4" ></td>
+	  </tr>
+	  <tr>
+			<td>Java</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="4.2" ></td>
+	  </tr>
+	  <tr>
+			<td>Natural/ADABAS</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="4.2" ></td>
+	  </tr>
+	  <tr>
+			<td>HTML 5.0/CSS</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="4" ></td>
+	  </tr>
+	  <tr>
+			<td>Adobe Fireworks</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="4" ></td>
+	  </tr>
+	  <tr>
+			<td>Javascript</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="3.5" ></td>
+	  </tr>
+	  <tr>
+			<td>C/C++</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="3" ></td>
+	  </tr>
+	  <tr>
+			<td>PHP</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="2.5" ></td>
+	  </tr>
+	  <tr>
+			<td>Adobe Flash</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="2" ></td>
+	  </tr>
+	  <tr>
+			<td>OPNET Modeler</td>
+			<td><input type="range" step="0.01" disabled=true class="slider" min="0" max="5" value="1.5" ></td>
+	  </tr>
+	</table>
+	
+  </div>
+</div><br>
+
 <!-- FORMAÇÃO -->
 <div class="container-fluid bg-3 text-center formacaoPai">    
-  <h3 id="formacao" class="anim">Formação</h3><br>
+  <h3 id="formacao" class="anim">
+  <img src="icones/formacao-icon.png" style="width:3.5%; height:3.5%"/> Formação
+  </h3>
+  <br>
   <!-- Formação 1 -->
   <div class="row">
 	<div class="logoFormacao">
-	  <img src="logos/ufpb_logo.png" style="width:25%; height:25%"/>
+	  <img src="logos/ufpb_logo.png" style="width:35%; height:35%"/>
     </div>
 	<div class="itemFormacao">
       <p class="titulo barraTitulo">Universidade Federal da Paraíba (UFPB) &nbsp;&nbsp;&nbsp; [2012 - 2014] </p>
@@ -168,7 +206,7 @@
   <!-- Formação 2 -->
   <div class="row">
   	<div class="logoFormacao">
-	  <img src="logos/ifpb_logo.png" style="width:30%; height:30%"/>
+	  <img src="logos/ifpb_logo.png" style="width:40%; height:40%"/>
     </div>
 	<div class="itemFormacao">
       <p class="titulo barraTitulo"> Instituto Federal da Paraiba (IFPB) &nbsp;&nbsp;&nbsp; [2006 - 2010] </p>
@@ -180,7 +218,9 @@
 
 <!-- EXPERIENCIA -->
 <div class="container-fluid bg-3 text-center formacaoPai">    
-  <h3 id="experiencia" class="anim">Experiência Profissional</h3><br>
+  <h3 id="experiencia" class="anim">
+	<img src="icones/trabalho-icon.png" style="width:3.5%; height:3.5%"/> Experiência Profissional
+  </h3><br>
   <!-- Exp 1 -->
   <div class="row">
 	<div class="logoFormacao"> &nbsp;&nbsp; </div>
@@ -245,7 +285,7 @@
   <div class="row">
 	<div class="logoFormacao"> &nbsp;&nbsp; </div>
 	<div class="itemFormacao">
-      <p class="titulo barraTitulo"> Laboratório de Tecnologias para o Ensino Virtual e Estatística (LabTEVE) &nbsp;&nbsp; [06/2011 - 12/2011] </p>
+      <p class="titulo barraTitulo"> Laboratório de Tecnologias para o Ensino Virtual e Estatística (LabTEVE) &nbsp;&nbsp; [jun/2011 - dez/2011] </p>
 	  <p class="textoNormal"> <b>Função:</b> Pesquisador Bolsista DTI e Desevolvedor / Processo CNPq 382992/2011-3 </p>
 	  <p class="textoNormal"> <b>Tecnologias Usadas:</b> C/C++, Shell Script, Fedora Linux, OPNET Modeler. </p>
     </div>
@@ -254,9 +294,171 @@
 </div><br>
 
 
+
+<!-- PUBLICAÇÕES -->
+<div class="container-fluid bg-3 text-center formacaoPai">    
+  <h3 id="publicacoes" class="anim"> 
+  <img src="icones/papers-icon.png" style="width:3%; height:3%"/> Publicações 
+  </h3><br>
+  <!-- Paper 2019 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2019 </p>
+	  <p class="textoNormal"> <img src="icones/pdf-icon.png" style="width:3%; height:3%"/> Machado, L.S.; Moraes, R.M.; Valença, A.M.; Macedo, E.R.; Paiva, P.; Moura, I.F. (2019). 
+	<b>Pesquisa e Desenvolvimento de Simuladores de Realidade Virtual para Saúde com Avaliação Automática do Desempenho do Usuário.</b>
+ Book Chapter. In: Paes, N.A.; Machado, L.S.; Moraes, R.; Valença, A.M. (Org.), 10 Anos de Produção do Programa de Pós-Graduação em 
+ Modelos de Decisão e Saúde, p. 101-120, Cap 6. UFPB. ISBN: 978-85-9559-221-61(e-book) </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Paper 2018 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2018 </p>
+	  <p class="textoNormal"> <img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+	Paiva, P.V.F.; Valença, A.M.G.; Moraes, R.M.; Batista, T.V.V.; Machado, L.S. (2018) <b>SimCEC: A Collaborative VR-Based Simulator for Surgical
+	Teamwork Education.</b> Computers in Entertainment 16(2): 3. DOI: 10.1145/3177747 </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Paper 2017 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2017 </p>
+	  <p class="textoNormal">
+		 <img src="icones/pdf-icon.png" style="width:3%; height:3%"/>	  
+		Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C.; Moraes, R.M. (2017) <b> Networking Issues for 3D Medical Collaborative Virtual Environments: Design and Applications. </b> Journal on Interactive Systems 8(2): 89-97.
+	  </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C.; Moraes, R.M.; Valença, A.M.G. (2017) <b> Architectures of Collaborative Virtual Environments for Teamwork Training. </b> In: 19th Symposium on Virtual and Augmented Reality 2017. Curitiba/PR - Brazil. p. 127-136. DOI: 10.1109/SVR.2017.25
+	  </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Paper 2016 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2016 </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.S.; Costa, T. (2016) <b>Hemodynamic behavior modeling of a Virtual Surgical Patient based on a Fuzzy Expert System. </b> Tempus: Actas de Saúde Coletiva 10(2): 187-203. DOI: 10.18569/tempus.v10i2.1651.
+	  </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.; Valença, A.M.G. (2016) <b>Enhancing Collaboration on a Cloud-Based CVE for Supporting Surgical Education. </b> In: Proc. XVIII Symposium on Virtual and Augmented Reality, Gramado/BR, 8 pg. DOI: 10.1109/SVR.2016.16.
+	  </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Paper 2015 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2015 </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.S.; Batista, T.V.V. (2015) <b>A Collaborative and Immersive VR Simulator for Education and Assessment of Surgical Teams.</b> In: Proc. Symposium on Virtual and Augmented Reality 2015. Sao Paulo/SP - Brazil. p. 176-185. DOI: 10.1109/SVR.2015.33
+	  </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Paper 2014 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2014 </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.S.; Valença, A.M.G.; Moraes, R.M. (2014)<b> Simulação Cirúrgica: Aplicando uma Arquitetura de Avaliação Colaborativa de Equipes.</b>In: Symposium on Virtual and Augmented Reality 2014. Salvador/BA - Brazil. p. 307-310.
+	  </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+    
+  <!-- Paper 2013 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2013 </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Gadelha, R.; Machado, L.S.; Santos, S.R. (2013) <b> Potencialidades da Educação em Saúde Baseada em Realidade Virtual. </b> Revista Eletrônica de Comunicação, Informação & Inovação em Saúde (RECIIS) 7:806. 
+	  </p>
+	  <p class="textoNormal"> 
+	  <img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+	  Paiva, P.V.F.; Machado L.S.; Valença, A.M.G.; Moraes, .M. (2013) <b>A Proposal of Serious Game for Teaching Biosecurity in Dentistry. </b>Pesquisa Brasileira em Odontopediatria e Clínica Integrada 13: 135-139.
+	  </p>
+	  <p class="textoNormal"> 
+	  <img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+	  Paiva, P.V.F.; Machado, L.S.; Valença, A.M.G. (2013) <b>A Virtual Environment for Training and Assessment of Surgical Teams. </b> In: Symposium on Virtual and Augmented Reality 2013. Cuiabá/MT - Brazil. p. 17-26. DOI: 10.1109/SVR.2013.22.
+	  </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Paper 2012 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2012 </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C. (2012)<b> An Experimental Study on CHVE's Performance Evaluation. </b>Studies in Health Technology and Informatics, v.173, p. 328-330. IOS Press.
+	  </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C. (2012)<b> A peer-to-peer Multicast Architecture for Supporting Collaborative Virtual Environments (CVEs) in Medicine. </b>In: Symposium on Virtual and Augmented Reality 2012. Niterói/RJ - Brazil. p. 165-173. DOI: 10.1109/SVR.2012.7.
+	  </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Paper 2011 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2011 </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C. (2011) <b>Simulation and Performance Analysis of the Collaboration s Module in a VR framework.</b> In: Symposium on Virtual and Augmented Reality 2011 Uberlândia/MG.
+	  </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Paper 2010 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2010 </p>
+	  <p class="textoNormal"> 
+		<img src="icones/pdf-icon.png" style="width:3%; height:3%"/>
+		Paiva, P.V.F.; Machado, L.S. (2010) <b>Um Estudo sobre Manipulação Cooperativa em Ambientes Virtuais Colaborativos.</b> In: VII Workshop de Realidade Virtual e Aumentada, São Paulo, Brazil, p. 185-190.
+	  </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+    
+</div><br>
+
+
+
 <!-- INICIO PROJETOS -->  
 <div class="container-fluid bg-3 text-center">    
-  <h3 id="projetos" class="anim">Projetos</h3><br>
+  <h3 id="projetos" class="anim">
+  <img src="icones/projetos-icon.png" style="width:2.5%; height:2.5%"/> Projetos
+  </h3><br>
   
   <!-- PROJETO 1 -->
   <div id="AVC" class="tituloProj"> Ambientes Virtuais Colaborativos e Imersivos para Medicina </div></br>
@@ -327,7 +529,8 @@
 	  auxiliada por computador, tratamento, planejamento cirúrgico, treinamento e credenciamento médico; empregando as mais modernas técnicas 
 	  de comunicação e transmissão multimídia para desenvolver e gerenciar ambientes computacionais de alto desempenho que atendam às necessidades
 	  da medicina assistida por computação científica.
-	  </p>	
+	  </p>
+	  <p><b>Tecnologias usadas:</b> Framework Cybermed, Shell Script, C/C++ </p>
     </div>
   </div></br>
   
