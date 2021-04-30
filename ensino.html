@@ -5,37 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilos/menu-sanfona.css">  
   <link rel="stylesheet" href="estilos/estilo.css">
   <link rel="stylesheet" href="estilos/menu.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-  <script>
-  function rolar_para(elemento) 	{
-	  $('html, body').animate({ 		scrollTop: $(elemento).offset().top
-	  }, 2000);
-  }
-
-  function acessar()	{
-	  var elem = document.getElementById('myfoto'); 
-	  if (elem)	{	
-		  elem.classList.add('opac');
-	  }   
-  }
-  
-  $('#simcec').onScrolledTo(0, function() {
-    alert('you have scrolled to the h1!');
-  });
-  
-  //
-  
-  </script>
-  </script> <!-- JQUERY -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="javascript/website_librarie.js"></script>
 </head>
-<body onload='acessar()'>
+<body>
 
-<nav class="navbar navbar-inverse">
+<nav id='topo' class="navbar navbar-inverse"> <!-- TOPO -->
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -43,13 +23,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Portfolio</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active" style="padding-right:40px"><a href="index.html">Home</a></li><>
+        <li class="active" style="padding-right:40px"><a href="index.html">Home</a></li>
 		<li><a href="#" style="padding-right:40px" onclick="rolar_para('#sobre')"> Sobre</a></li>
         <li><a href="#" style="padding-right:40px" onclick="rolar_para('#formacao')"> Formação</a></li>
+		<li><a href="#" style="padding-right:40px" onclick="rolar_para('#publicacoes')"> Publicações</a></li>
         <li><a href="#" style="padding-right:40px" onclick="rolar_para('#experiencia')" >Experiência</a></li>
 		<li><a href="#" onclick="rolar_para('#ensino')" >Ensino</a></li>
 		<li>
@@ -80,6 +60,11 @@
   </div>
 </nav>
 
+<!-- Botão de rolagem para o Topo -->
+<button onclick="rolar_para('#topo');hideBtnOnTop();" id="myTopoBtn" title="Go to top" > <!-- style="width:5%; height:10%" -->
+<img src="icones/seta_branca.png">
+</button>
+
 <div class="jumbotron" >
   <div class="container text-center">
 	<center><img src="paulo.gif" style="width:12%; height:12%" class="img-responsive myphoto"/></center>
@@ -94,13 +79,177 @@
   </div>
 </div>
  
-ENSINO
+<!-- EXPERIENCIA -->
+<div class="container-fluid bg-3 text-center formacaoPai">    
+  <h3 id="ensino" class="anim">
+	<img src="icones/educacao-icon.png" style="width:3.5%; height:3.5%"/> Ensino
+  </h3><br>
+  
+  <!-- Exp 2 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo" style="background-color:#90b3d5;padding:10px;"> Faculdade Internacional da Paraíba (FPB)</p>
+
+	  <div align="left"><b>Disciplinas ministradas:</b> </div>
+	  <button class="accordion">Jogos <i>Multiplayers</i> (40H)</button>
+	  <div class="painel">
+		  <p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+			 <a href="https://drive.google.com/file/d/18tgjvP87ceJfhdK93o3wB7ikWqD3tWdl/view?usp=sharing" target="_blank"> 1- Introdução aos Jogos Multiplayer
+		  </a></p>		
+		  <p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+			 <a href="https://drive.google.com/file/d/1LCUaAWALuKvAwMLEr_HHs7IsHNZ7wUyv/view?usp=sharing" target="_blank"> 2- Aula 2 - Programação Básica para Unity em C#
+		  </a></p>		
+	  </div>
+	  
+	  
+
+	  <button class="accordion">Gestão de Projetos (45 H)</button>
+	  <div class="painel">
+		  <p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+			   <a href="https://drive.google.com/file/d/1ZXFLYwaFoyyjGdhdMWKukHmVz-hj17w0/view?usp=sharing" target="_blank"> 1- Introdução à Gestão de Projetos
+		  </a></p>		
+		  <p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+			   <a href="https://drive.google.com/file/d/1SR6C_qDTo9sn26Cjo-I1e0607jTgMSHY/view?usp=sharing" target="_blank"> 2- Estruturas Organizacionais e Influencias Ambientais
+		  </a></p>		
+		  <p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+			   <a href="https://drive.google.com/file/d/1Tlhm5eHBtuaQMyjxNiWWrFs9aqQHs4RE/view?usp=sharing" target="_blank"> 3- Ciclo de Vida e Processos
+		  </a></p>		
+		  <p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+			   <a href="https://drive.google.com/file/d/15ZjEZ-3ryrKs8tDm3Jn4f_hxS1z2FW7e/view?usp=sharing" target="_blank"> 4- Introdução ao PMBOK e Gestão de Integração
+		  </a></p>		
+		  <p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+			   <a href="https://drive.google.com/file/d/1OPJ1b7YLPNceGgqZ4kNVf9W6t9aezz1c/view?usp=sharing" target="_blank"> 5- Gestão de Tempo
+		  </a></p>
+	  </div>
+
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Exp 3 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo" style="background-color:#90b3d5;padding:10px;"> Instituto Federal da Paraiba (IFPB) </p>
+	  
+	  <div align="left"><b>Disciplinas ministradas:</b> </div>
+	  <button class="accordion">Redes de Computadores (80 H)</button> <!-- https://drive.google.com/drive/folders/11msXdgUjJWFKfDRQ0te6UdbSoV_EQ2FQ -->
+	  <div class="painel">
+	    <p><img src="icones/download-icon.png" style="width:3%;heigth:3%"> Introdução a Redes de Computadores              </p>
+		<p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+		   <a href="https://drive.google.com/file/d/1xuNdp8_p1ts1rf7GDwxCj2MzepO_NWGs/view?usp=sharing" target="_blank"> Slide 1 - Redes Modernas (atualizado)           
+		</a></p>		
+		<p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+		   <a href="https://drive.google.com/file/d/1FMJoSV6oxUVUvHOan3A0rsScKkADbNxn/view?usp=sharing" target="_blank"> Slide 2 - S.O.s de Redes e Modelos de Referência
+		</a></p>		
+		<p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+		   <a href="https://drive.google.com/file/d/1R5W0IZCCSFKmTF7_jMOsSFp1_BhNfL85/view?usp=sharing" target="_blank"> Slide 3 - Camada Física e Difusão              
+		</a></p>		
+		<p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+		   <a href="https://drive.google.com/file/d/1giXVjBUPqx7SPkNdnzeib908jo1tecl6/view?usp=sharing" target="_blank"> Slide 4 - Camada de Enlace e Acesso ao Meio             
+		</a></p>
+		<p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+		   <a href="https://drive.google.com/file/d/1Cevkhki-Cu44t88bgHoPGUvHYDA_QE0S/view?usp=sharing" target="_blank"> Slide 5 - A Camada de Rede e o Protocolo IP
+		</a></p>
+		<p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+		   <a href="https://drive.google.com/file/d/1K4P7EHG65wxmUhDNJfBFMEZtQOgPdf-q/view?usp=sharing" target="_blank"> Slide 6 - A Camada de Transporte e TCP-IP
+		</a></p>
+		<p><img src="icones/download-icon.png" style="width:3%;heigth:3%">
+		   <a href="https://drive.google.com/file/d/1_svkj5CfsgvJCH1WrL_HizsExffAZt69/view?usp=sharing" target="_blank"> Slide 7 - Camada de Aplicacao
+		</a></p>
+	  </div>
+
+	  <button class="accordion">Programação Estruturada e Orientada a Objetos (100 H)</button>
+	  <div class="painel">	 
+	  </div>
+
+	  <button class="accordion">Programação Orientada a Objetos (100 H) </button>
+	  <div class="painel">	  
+	  </div> 
+
+	  <button class="accordion">Programação Orientada a Serviços (60 H) </button>
+	  <div class="painel">	  
+	  </div> 
+
+ 	  <button class="accordion"> Projeto de Desenvolvimento de Sistemas para Internet (60 H) </button>
+	  <div class="painel">	  
+	  </div> 
+
+	  <button class="accordion"> Comércio Eletrônico e Marketing (40 H) </button>
+	  <div class="painel">	  
+	  </div> 
+
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Exp 4 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo" style="background-color:#90b3d5;padding:10px;">  Escola de Serviço Público do Estado da Paraíba (ESPEP-PB) </p>
+	  
+	  <div align="left"><b>Cursos ministrados:</b> </div>
+	  <button class="accordion"> MS Excel intermediário (20 H) </button>
+	  <div class="painel">	  
+	  </div> 
+
+	  <button class="accordion"> Introdução ao Power Point (20 H) </button>
+	  <div class="painel">	  
+	  </div> 
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+  <!-- Exp 5 -->
+  <div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo" style="background-color:#90b3d5;padding:10px;"> Serviço Nacional de Aprendizagem Comercial da Paraíba (SENAC-PB) </p>
+	  
+	  <div align="left"><b>Cursos ministrados:</b> </div>
+	  <button class="accordion"> IPD - Introdução ao Processamento de Dados/Windows (20 H) </button>
+	  <div class="painel">
+	  </div> 
+
+	  <button class="accordion"> Sistemas Operacionais (20 H) </button>
+	  <div class="painel">
+	  </div> 
+	  
+	  <button class="accordion"> Inglês Instrumental (10 H) </button>
+	  <div class="painel">
+	  </div>
+	  
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+  </div></br>
+  
+</div><br>
+
 
 
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+	this.classList.toggle("sanfonaAtiva");
+	var painel = this.nextElementSibling;
+	if (painel.style.maxHeight) {
+	  painel.style.maxHeight = null;
+	} else {
+	  painel.style.maxHeight = painel.scrollHeight + "px";
+	} 
+  });
+}
+</script>
 
 </body>
 </html>

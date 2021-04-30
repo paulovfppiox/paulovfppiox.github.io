@@ -1,21 +1,21 @@
     /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
+    .navbar  {
       margin-bottom: 0;
       border-radius: 0;
     }
     
     /* Add a gray background color and some padding to the footer */
-    footer {
+    footer		 {
       background-color: #f2f2f2;
       padding: 25px;
     }
 	
-	img {
+	img 	 	{
 		max-width: 100%;
 		max-height: 100%;
 	}
 	
-	.myphoto {
+	.myphoto	 {
 	  border-radius: 50%;
 	}
 	
@@ -51,6 +51,12 @@
 		display: inline-block;
 		/* border: 4px green solid; */
 	}
+	
+	.fonteLegenda {
+		font-family: "Verdana";
+		font-size: 12px;
+	}
+	
 	/* ------------ FIM: Linha p/ cada Formação ------------ */
 	
 	h3 {
@@ -156,8 +162,8 @@
 	  cursor: pointer;
 	  padding: 15px;
 	  border-radius: 4px;
-	  width: 20vw;
-	  height: 20vh;
+	  width: 100px; 	/* vw; */
+	  height: 100px; /* vh; */
 	}
 
 	#myTopoBtn:hover {
@@ -178,7 +184,7 @@
 	
 	
 	
-	/* --------------- SLIDER ---------------- */
+	/* --------------- SLIDER das Tecnologias ---------------- */
 	.slider {
 	  -webkit-appearance: none;
 	  width: 40%;
@@ -197,7 +203,7 @@
 	.slider::-webkit-slider-thumb {
 	  -webkit-appearance: none;
 	  appearance: none;
-	  /*border-radius: 50%;*/
+	  border-radius: 50%; /* Define círculo */
 	  width: 25px;
 	  height: 25px;
 	  background: #4CAF50;
@@ -206,7 +212,7 @@
 	.slider::-moz-range-thumb {
 	  width: 25px;
 	  height: 25px;
-	  /*border-radius: 50%;*/
+	  border-radius: 50%; /* Define círculo */
 	  background: #4CAF50;
 	}
 	

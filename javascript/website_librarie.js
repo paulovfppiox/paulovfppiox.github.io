@@ -30,15 +30,15 @@ $(window).on('resize scroll', function() {
 		 $('#' + idAtivo).removeClass('imgprojFadeIn');
 		 $('#' + idAtivo).addClass('imgprojFadeOut');
 	}
-	
-	// Define visibilidade do botão de topo de acordo com o scroll
-	showTopoBtn();
   });
+  // Define visibilidade do botão de topo de acordo com o scroll
+  showTopoBtn();
 });  
 
 /* 3) Exibe o botão para ir ao topo da página */
 function showTopoBtn()		{
-	// Acessar Botão de Retorno para o topo da Página
+	
+	 // Acessar Botão de Retorno para o topo da Página
 	 var mybutton = document.getElementById("myTopoBtn");
 	
 	 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -69,5 +69,4 @@ function hideBtnOnTop()		{
 	} else {	// Caso não topo, repete a função
 		 setTimeout( hideBtnOnTop, 1000 );
 	}
-		
 }
