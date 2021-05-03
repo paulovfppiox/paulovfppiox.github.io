@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Paulo Paiva</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilos/estilo.css">
+  <link rel="stylesheet" href="estilos/menu.css">
+  <link rel="stylesheet" href="estilos/simcec-banner.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
+  <script type="text/javascript" src="javascript/website_librarie.js"></script>
+</head>
+<body>
+
+<nav id='topo' class="navbar navbar-inverse"> <!-- TOPO -->
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" style="padding-right:40px"><a href="index.html">Home</a></li><>
+		<li><a href="#" style="padding-right:40px" onclick="rolar_para('#sobre')"> Sobre</a></li>
+        <li><a href="#" style="padding-right:40px" onclick="rolar_para('#formacao')"> Formação</a></li>
+		<li><a href="#" style="padding-right:40px" onclick="rolar_para('#publicacoes')"> Publicações</a></li>
+        <li><a href="#" style="padding-right:40px" onclick="rolar_para('#experiencia')" >Experiência</a></li>
+		<li><a href="ensino.html">Ensino</a></li>
+      </ul>
+	  
+  <!-- <ul class="menu">
+  <li>
+    <a href="#">Parent Link</a>    
+  </li>
+</ul> -->
+	  
+    </div>
+  </div>
+</nav>
+
+<!-- Botão de rolagem para o Topo -->
+<button onclick="rolar_para('#topo');hideBtnOnTop();" id="myTopoBtn" title="Go to top" > <!-- style="width:5%; height:10%" -->
+<img src="icones/seta_branca.png">
+</button>
+
+<div class="jumbotron"> <!-- style="background-color:#656966;" -->
+  <div class="container text-center">
+	
+	<div class="slideshow-container">
+		<div class="mySlides fadeBanner">
+		  <div class="numbertext">1 / 5</div>
+		  <img src="fotos/simcec-banner/img1.png" style="width:100%">
+		  <div class="text">Equipe Cirúrgica</div>
+		</div>
+
+		<div class="mySlides fadeBanner">
+		  <div class="numbertext">2 / 5</div>
+		  <img src="fotos/simcec-banner/img2.png" style="width:100%">
+		  <div class="text">Usuário selecionando instrumentais cirúrgicos</div>
+		</div>
+
+		<div class="mySlides fadeBanner">
+		  <div class="numbertext">3 / 5</div>
+		  <img src="fotos/simcec-banner/img3.png" style="width:100%">
+		  <div class="text">Menu Principal SimCEC </div>
+		</div>
+		
+		<div class="mySlides fadeBanner">
+		  <div class="numbertext">4 / 5</div>
+		  <img src="fotos/simcec-banner/img4.png" style="width:100%">
+		  <div class="text">Procedimento de incisão mandibular</div>
+		</div>
+
+		<div class="mySlides fadeBanner">
+		  <div class="numbertext">5 / 5</div>
+		  <img src="fotos/simcec-banner/img5.png" style="width:100%">
+		  <div class="text">Cena inicial</div>
+		</div>
+
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+	    <span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span>
+	</div>
+	
+  </div>
+</div>
+ 
+<!-- SOBRE -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 id="sobre" class="anim" >
+	<img src="icones/sobre-icon.png" style="width:2.2%; height:2.2%"/> SimCEC: Um Simulador Colaborativo para o Treinamento e <br> Avaliação Colaborativa de Equipes Cirúrgicas
+  </h3>
+  <br>
+  <div class="row">
+	  <div class="sobre textoNormal">
+      <p> 
+	  <center><iframe width="500" height="300" src="https://www.youtube.com/embed/WPGG-drnb20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+	  </iframe></center>
+	  
+	  <br>
+	  O SIMCEC (Simulador Colaborativo para para Treinamento de Equipes Cirúrgicas) tem como objetivo principal auxiliar no processo de educação <br>
+	  e avaliação de estudantes em nível de graduação e técnico de cursos de saúde a respeito dos  aspectos básicos presentes nos procedimentos cirúrgicos. <br>
+	  São abordados procedimentos e conceitos cirúrgicos básicos, tais como: verificação dos raios-X do paciente, seleção de drogas anestésicas e <br>
+	  intrumentais cirúrgicos, abordagens de incisão em fraturas mandibulares (estudo de caso), dentre outros.
+	  </p>    
+	  </div>
+  </div>
+</div><br>
+
+<!-- NOTICIAS -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 id="areas" class="anim" >
+  <img src="icones/papers-icon.png" style="width:2.2%; height:2.2%"/> Notícias do Projeto
+  </h3><br>
+  <div class="row">
+	  <div class="sobre textoNormal">
+	    <p class="textoNormal"><b>Entrevista com a profa. Liliane Machado (05/2015)</b></p>
+		O programa Espaço Experimental da UFPB realizou uma entrevista com a profa. Liliane Machado sobre o projeto SimCEC. 
+		Confira a matéria completa no blog oficial do programa <a href="http://espaco-experimental.blogspot.com/2015/" target="_blank">AQUI</a> e o audio a seguir:</br>
+	    <center><iframe src='https://www.4shared.com/web/embed/audio/file/3IhCb7eBce?type=NORMAL&widgetWidth=530&showArtwork=true&playlistHeight=0&widgetRid=168286172104' style='overflow:hidden;height:152px;width:530px;border: 0;margin:0;'></iframe></center>
+	  </div>
+	  
+	  <div class="sobre textoNormal">
+	    <p class="textoNormal"><b>Panorama das Pesquisas de RV (05/2015)</b></p>
+		A pesquisa foi mencionada na Simpósio de Realidade Virtual e Aumentada 2015, pelo prof. Romero Tori da USP como tendência na área de RV.<br>
+		Confira <a href="http://blog.esemd.org/2015/05/panorama-das-pesquisas-de-realidade.html" target="_blank">AQUI</a>.
+	  </div>
+	  
+  </div>
+</div><br>
+
+
+<!-- PRÊMIO -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 id="areas" class="anim" >
+  <img src="icones/trofeu-icon.png" style="width:2.2%; height:2.2%"/> Prêmios do Projeto
+  </h3><br>
+  <div class="row">
+	  <div class="sobre textoNormal">
+	    <p class="textoNormal"><b>2o Prêmio de Inovação - Agência INOVA/UFPB</b></p>
+		O programa Espaço Experimental da UFPB realizou uma entrevista com a profa. Liliane Machado sobre o projeto SimCEC.</br> 
+	    <img src="fotos/premio1.png" style="width:40%; height:40%"/>
+		<img src="fotos/premio2.jpg" style="width:50%; height:50%"/>
+	  </div>
+  </div>
+</div><br>
+
+
+<!-- ACESSO -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 id="areas" class="anim" >
+  <img src="icones/trofeu-icon.png" style="width:2.2%; height:2.2%"/> Acesso
+  </h3><br>
+  <div class="row">
+	  <div class="sobre textoNormal">
+	    <p class="textoNormal"><b>Acesse o SimCEC</b></p>
+		 1- Instale o plugin do Unity Web Player AQUI;<br>
+		 2- Acesse o SimCEC AQUI.<br>
+		 OBS: Atualmente, o Unity Web Player, encontra-se disónível apenas para o Internet Explorer.
+	  </div>
+  </div>
+</div><br>
+
+
+<!-- EQUIPE -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 id="areas" class="anim" >
+  <img src="icones/trofeu-icon.png" style="width:2.2%; height:2.2%"/> Equipe
+  </h3><br>
+  <div class="row">
+	  <div class="sobre textoNormal">
+	  <ul>
+		<li>Paulo Vinícius de Farias Paiva - Pesquisa e Desenvolvimento</li>
+		<li>Thiago Vinícius Vieira Batista - Desenvolvimento           </li>
+		<li>Liliane dos Santos Machado     - Orientação                </li>
+		<li>Ana Maria Gondim Valença	   - Co-orientação	           </li>
+		<li>Ronei Marcos de Moraes		   - Co-orientação 	           </li>
+	  </ul>		                                                       
+	  </div>
+  </div>
+</div><br>
+
+
+
+
+<footer class="container-fluid text-center" style="background-color: black;">
+  <p>Paulo Paiva</p>
+</footer>
+
+<script type="text/javascript" src="javascript/simcec-banner.js"></script>
+
+</body>
+</html>
