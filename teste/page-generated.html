@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Paulo Paiva</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
+</head>
+<body>
+
+<div id="artigosId" class="container-fluid bg-3 text-center formacaoPai">
+
+<div class="row">
+	<div class="logoFormacao"> &nbsp;&nbsp; </div>
+	<div class="itemFormacao">
+      <p class="titulo barraTitulo"> 2019 </p>
+	  <p class="textoNormal"> 
+		1. Machado, L.S.; Moraes, R.M.; Valença, A.M.; Macedo, E.R.; Paiva, P.; Moura, I.F. (2019). 
+		<b>Pesquisa e Desenvolvimento de Simuladores de Realidade Virtual para Saúde com Avaliação Automática do Desempenho do Usuário.</b>
+		Book Chapter. In: Paes, N.A.; Machado, L.S.; Moraes, R.; Valença, A.M. (Org.), 10 Anos de Produção do Programa de Pós-Graduação em 
+		Modelos de Decisão e Saúde, p. 101-120, Cap 6. UFPB. ISBN: 978-85-9559-221-61(e-book) </p>
+    </div>
+	<div class="endFormacao"> &nbsp;&nbsp; </div> <!-- Espaços -->
+</div></br>
+</div>
+
+<script type="text/javascript">
+  
+	$.getJSON("papers.json", function(json) {
+		alert(json); // this will show the info it in firebug console
+	});
+
+	  
+	/*var obj = JSON.parse(text, function (key, value) {
+	  if (key == "birth") {
+		return new Date(value);
+	  } else {
+		return value;
+	  }
+	});
+	document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;*/
+  
+   var rootDiv = document.getElementById("artigosId"); // .innerHTML
+   if ( rootDiv != null )	{
+		// rootDiv.insertAdjacentHTML("afterend", "<h3>This is the text</h3>");
+		var divLine = document.createElement('div'); // createElement('p')  // paragraph
+		divLine.innerHTML = '----- LINE ---------';
+		divLine.className = 'row';
+		rootDiv.appendChild( divLine );
+		
+		var divLogo = document.createElement('div'); // createElement('p')  // paragraph
+		divLogo.innerHTML = ' &nbsp;&nbsp; ';
+		divLogo.className = 'logoFormacao';
+		divLine.appendChild( divLogo );
+		
+		var divItemForm = document.createElement('div'); // createElement('p')  // paragraph
+		divItemForm.className = 'itemFormacao';
+		divLine.appendChild( divItemForm );
+		
+		var paragAno = document.createElement('p'); // createElement('p')  // paragraph
+		paragAno.innerHTML = '2019';
+		paragAno.classList.add("titulo", "barraTitulo");
+		divItemForm.appendChild( paragAno );
+		
+		var paperTxt = document.createElement('p'); // createElement('p')  // paragraph
+		paperTxt.innerHTML = "<img src='icones/pdf-icon.png' style='width:2.3em; height:2.8em'/>ARTIGO TESTE ARTIGO TESTE ARTIGO TESTE ARTIGO TESTE <b>ARTIGO TESTE ARTIGO</b> TESTE ARTIGO TESTE ARTIGO TESTE ARTIGO TESTE ARTIGO TESTE ";
+		paperTxt.className = "textoNormal";
+		divItemForm.appendChild( paperTxt );
+		
+		var divEnd = document.createElement('div');
+		divEnd.innerHTML = " &nbsp;&nbsp; ";
+		divEnd.className = "endFormacao";
+		divLine.appendChild( divEnd );
+		
+		var br = document.createElement("br");
+		divLine.appendChild( br );
+   }
+   // document.body.insertBefore(divNova, divAtual);
+  
+  
+  </script>
+
+</body>
+</html>
+
+
