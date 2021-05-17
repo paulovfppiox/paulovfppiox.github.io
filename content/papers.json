@@ -1,0 +1,93 @@
+[ 
+ {
+ "autores": "Machado, L.S.; Moraes, R.M.; Valença, A.M.; Macedo, E.R.; Paiva, P.; Moura, I.F.",
+ "titulo": "Pesquisa e Desenvolvimento de Simuladores de Realidade Virtual para Saúde com Avaliação Automática do Desempenho do Usuário.",
+ "ano": 2019,
+ "publicacao": "Book Chapter. In: Paes, N.A.; Machado, L.S.; Moraes, R.; Valença, A.M. (Org.), 10 Anos de Produção do Programa de Pós-Graduação em Modelos de Decisão e Saúde, p. 101-120, Cap 6. UFPB. ISBN: 978-85-9559-221-61(e-book)"
+},  
+{
+ "autores": "Paiva, P.V.F.; Valença, A.M.G.; Moraes, R.M.; Batista, T.V.V.; Machado, L.S.",
+ "titulo": "SimCEC: A Collaborative VR-Based Simulator for Surgical Teamwork Education.",
+ "ano": 2018,
+ "publicacao": "Computers in Entertainment 16(2): 3. DOI: 10.1145/3177747"
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C.; Moraes, R.M.",
+ "titulo": "Networking Issues for 3D Medical Collaborative Virtual Environments: Design and Applications.",
+ "ano": 2017,
+ "publicacao": "Journal on Interactive Systems 8(2): 89-97."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C.; Moraes, R.M.; Valença, A.M.G.",
+ "titulo": "Architectures of Collaborative Virtual Environments for Teamwork Training.",
+ "ano": 2017,
+ "publicacao": "In: 19th Symposium on Virtual and Augmented Reality 2017. Curitiba/PR - Brazil. p. 127-136. DOI: 10.1109/SVR.2017.25"
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Costa, T.",
+ "titulo": "Hemodynamic behavior modeling of a Virtual Surgical Patient based on a Fuzzy Expert System.",
+ "ano": 2016,
+ "publicacao": "Tempus: Actas de Saúde Coletiva 10(2): 187-203. DOI: 10.18569/tempus.v10i2.1651."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.; Valença, A.M.G.",
+ "titulo": "Enhancing Collaboration on a Cloud-Based CVE for Supporting Surgical Education.",
+ "ano": 2016,
+ "publicacao": "In: Proc. XVIII Symposium on Virtual and Augmented Reality, Gramado/BR, 8 pg. DOI: 10.1109/SVR.2016.16."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Batista, T.V.V.",
+ "titulo": "A Collaborative and Immersive VR Simulator for Education and Assessment of Surgical Teams.",
+ "ano": 2015,
+ "publicacao": "In: Proc. Symposium on Virtual and Augmented Reality 2015. Sao Paulo/SP - Brazil. p. 176-185. DOI: 10.1109/SVR.2015.33"
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Valença, A.M.G.; Moraes, R.M.",
+ "titulo": "Simulação Cirúrgica: Aplicando uma Arquitetura de Avaliação Colaborativa de Equipes.",
+ "ano": 2014,
+ "publicacao": "In: Symposium on Virtual and Augmented Reality 2014. Salvador/BA - Brazil. p. 307-310."
+},
+{
+ "autores": "Paiva, P.V.F.; Gadelha, R.; Machado, L.S.; Santos, S.R.",
+ "titulo": "Potencialidades da Educação em Saúde Baseada em Realidade Virtual.",
+ "ano": 2013,
+ "publicacao": "Revista Eletrônica de Comunicação, Informação & Inovação em Saúde (RECIIS) 7:806."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado L.S.; Valença, A.M.G.; Moraes, .M.",
+ "titulo": "A Proposal of Serious Game for Teaching Biosecurity in Dentistry.",
+ "ano": 2013,
+ "publicacao": "Pesquisa Brasileira em Odontopediatria e Clínica Integrada 13: 135-139."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Valença, A.M.G.",
+ "titulo": "A Virtual Environment for Training and Assessment of Surgical Teams.",
+ "ano": 2013,
+ "publicacao": "In: Symposium on Virtual and Augmented Reality 2013. Cuiabá/MT - Brazil. p. 17-26. DOI: 10.1109/SVR.2013.22."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C.",
+ "titulo": "An Experimental Study on CHVE's Performance Evaluation.",
+ "ano": 2012,
+ "publicacao": "Studies in Health Technology and Informatics, v.173, p. 328-330. IOS Press."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C.",
+ "titulo": "A peer-to-peer Multicast Architecture for Supporting Collaborative Virtual Environments (CVEs) in Medicine.",
+ "ano": 2012,
+ "publicacao": "In: Symposium on Virtual and Augmented Reality 2012. Niterói/RJ - Brazil. p. 165-173. DOI: 10.1109/SVR.2012.7."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.; Oliveira, J.C.",
+ "titulo": "Simulation and Performance Analysis of the Collaboration s Module in a VR framework.",
+ "ano": 2011,
+ "publicacao": "In: Symposium on Virtual and Augmented Reality 2011 Uberlândia/MG."
+},
+{
+ "autores": "Paiva, P.V.F.; Machado, L.S.",
+ "titulo": "Um Estudo sobre Manipulação Cooperativa em Ambientes Virtuais Colaborativos.",
+ "ano": 2010,
+ "publicacao": "In: VII Workshop de Realidade Virtual e Aumentada, São Paulo, Brazil, p. 185-190."
+}
+]
+  
