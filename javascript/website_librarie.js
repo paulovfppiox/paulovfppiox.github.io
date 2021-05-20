@@ -1,4 +1,6 @@
 var btnTopClicked = false; 
+
+alert("Ok!!");
   
 /* 1) Função usada pelo menu drop-down para ir aos elementos âncoras (subitens) */
 function rolar_para(elemento) 			{
@@ -82,5 +84,22 @@ function hideBtnOnTop()		{
 		 setTimeout( hideBtnOnTop, 1000 );
 	}
 }
+
+
+/* function loadScript()	{
+	let myScript = document.createElement("script");
+	myScript.setAttribute("src", "javascript/website_librarie.js");
+	myScript.id = "scriptID";
+	document.head.appendChild( myScript );
+	document.head.removeChild( myScript ); 
+	// Import code
+	let myScript = document.getElementById('scriptID');
+	myScript.setAttribute("src", "javascript/website_librarie.js");
+	// document.head.appendChild( myScript );
+		
+	// Exclude code
+	document.head.removeChild(myScript);
+	system=undefined;
+}*/
 
 

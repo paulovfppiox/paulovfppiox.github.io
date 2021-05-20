@@ -11,7 +11,8 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="javascript/website_librarie.js"></script>
+  <script type="text/javascript" id="scriptID" src="javascript/website_librarie.js"></script>
+  
   <style>
 	#overlay {
 	  position: fixed;
@@ -22,20 +23,33 @@
 	  left: 0;
 	  right: 0;
 	  bottom: 0;
-	  background-color: rgba(0,0,0,0.5);
+	  background-color: rgba(0,0,0,0.9);
 	  z-index: 2;
 	  cursor: pointer;
 	}
-	.imgAtiva {
+	.imgAtiva { /* Início da animação */
 	  position: fixed;
 	  display: none;
-	  width: 80%;
-	  height: 80%;
+	  border-style: solid;
+	  border-color: white;
+	  border-width: thin medium thick 10px;
+	  width: 5%;
+	  height: 5%;
 	  top: 50%;
 	  left: 50%;
+	  opacity: 0.5;
 	  z-index: 3;
 	  cursor: pointer;
 	  transform: translate(-50%, -50%);
+	}
+	
+	.img-container {
+	  display: inline;
+	  position: relative;
+	}
+	.close {
+	  position: absolute;
+	  right: 0;
 	}
 	
   </style>
@@ -45,16 +59,23 @@
   
 	function disableScroll() 	{
 
-		console.log(" Disable!!" );
-		document.getElementById('myTopoBtn').style.display = "none";
-		document.body.style.overflow = 'hidden';
+		// console.log(" Disable!!" );
+		document.getElementById('myTopoBtn').style.display = "none"; // Desabilita botão topo
+		
+		// Oculta barra de rolagem
+		document.body.style.overflow = 'hidden';					 
 		document.querySelector('html').scrollTop = window.scrollY;
-		overLayOn();
+		
+		// OverlayOn = Camada preta, quando a imagem está ativa
+		document.getElementById("overlay").style.display = "block";
 	}
 	  
 	function enableScroll() 	{
-		console.log(" Enable!!" );
-		overLayOff();
+		// console.log(" Enable!!" );
+		
+		// Overlay off = Camada preta, quando a imagem está ativa
+		document.getElementById("overlay").style.display = "none";
+		
 		document.body.style.overflow = null;
 		window.onscroll = function() {};
 		document.getElementById('myTopoBtn').style.display = "block";
@@ -79,11 +100,13 @@
 			elem.style.display = "none";
 			console.log("elem.display = " + elem.style.display + "| none");
 			enableScroll();
+			location.reload();
 		});
 	}
 	
-	function drawImgAtiva( id )		{
+	function drawImgAtiva( id )			{
 	
+
 		disableScroll();
 		var imgs = document.getElementsByClassName("imgAtiva");
 		console.log( 'id= ' + id );
@@ -92,18 +115,23 @@
 		imgs[ (id-1) ].style.display = "block";
 		console.log("Imgs[" + (id-1) + "] display = " + imgs[ (id-1) ].style.display + "| block" );
 		
+		// Efeito animado de escala   
+		$( "#gal-img" + id ).animate({
+			width: "60%",
+			height: "70%",
+			opacity: 1,
+			borderWidth: "10px",
+			easing: "easeout"
+		}, 1500 );
+		
+		
+		// Monitora clique fora
 		setTimeout(function()	{ 
 				onCliqueForaImgAtiva( imgs[ (id-1) ] );
-		}, 3000);
+		}, 1000);
 		
 	}
-	
-	function overLayOn() 	{
-		document.getElementById("overlay").style.display = "block";
-	}
-	function overLayOff() 	{
-		document.getElementById("overlay").style.display = "none";
-	}	
+	 
 	
 </script>
   
@@ -111,12 +139,17 @@
 </head>
 <body>
 
-<div id="overlay" onclick="overLayO()"></div>
-<img id="gal-img1" src="fotos/simcec-banner/img1.png" class="imgAtiva"/>
-<img id="gal-img2" src="fotos/simcec-banner/img2.png" class="imgAtiva"/>
-<img id="gal-img3" src="fotos/simcec-banner/img3.png" class="imgAtiva"/>
+<div id="overlay"></div>
 
-<nav id='topo' class="navbar navbar-inverse"> <!-- TOPO -->
+<div class="img-container">
+  <img class="close" src="icones/premio-icon.png" />
+  <img id="gal-img1" src="fotos/premio1.png" class="imgAtiva"/>
+</div>
+
+<img id="gal-img2" src="fotos/premio2.jpg" class="imgAtiva"/>
+<img id="gal-img3" src="fotos/premio3.png" class="imgAtiva"/>
+
+<nav id='topo_simcec' class="navbar navbar-inverse"> <!-- TOPO -->
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -147,7 +180,7 @@
 </nav>
 
 <!-- Botão de rolagem para o Topo -->
-<button id="myTopoBtn" onclick="rolar_para('#topo');hideBtnOnTop();" title="Go to top" > <!-- style="width:5%; height:10%" -->
+<button id="myTopoBtn" onclick="rolar_para('#topo_simcec');hideBtnOnTop();" title="Go to top" > <!-- style="width:5%; height:10%" -->
 <img src="icones/seta_branca.png">
 </button>
 
@@ -279,8 +312,9 @@
 	  <div class="sobre textoNormal">
 	    <p class="textoNormal"><b>2o Prêmio de Inovação - Agência INOVA/UFPB</b></p>
 		O programa Espaço Experimental da UFPB realizou uma entrevista com a profa. Liliane Machado sobre o projeto SimCEC.</br> 
-	    <img src="fotos/premio1.png" onclick="drawImgAtiva(1)" style="width:40%; height:40%"/>
-		<img src="fotos/premio2.jpg" onclick="drawImgAtiva(2)" style="width:50%; height:50%"/>
+	    <img src="fotos/premio1.png" onclick="drawImgAtiva(1)" style="width:20em; height:15em"/>
+		<img src="fotos/premio2.jpg" onclick="drawImgAtiva(2)" style="width:20em; height:15em"/>
+		<img src="fotos/premio3.png" onclick="drawImgAtiva(3)" style="width:20em; height:15em"/>
 	  </div>
   </div>
 </div><br>
