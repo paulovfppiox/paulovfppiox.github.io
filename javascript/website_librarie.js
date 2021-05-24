@@ -1,20 +1,14 @@
 var btnTopClicked = false; 
 
-alert("Ok!!");
-  
+
 /* 1) Função usada pelo menu drop-down para ir aos elementos âncoras (subitens) */
-function rolar_para(elemento) 			{
+function rolar_para( elemento ) 			{
 	
 	var str = window.location.href;
 	var barraPos = str.lastIndexOf("/") + 1;
 	var htmlPos = str.lastIndexOf(".html");
 	var pageName = str.substring( barraPos , htmlPos );
 	
-	if ( pageName == "index" )		{
-		 $('html, body').animate( { scrollTop: $(elemento).offset().top }, 2000);
-	}	 else 	{
-		 location.replace("index.html");
-	}
 	$('html, body').animate( { scrollTop: $(elemento).offset().top }, 2000);
 	
 }
@@ -51,12 +45,12 @@ $(window).on('resize scroll', function() 	{
 
 /* 3) Exibe o botão para ir ao topo da página */
 function showTopoBtn()		{
-	
+	 
 	 // Acessar Botão de Retorno para o topo da Página
 	 var mybutton = document.getElementById("myTopoBtn");
 	
 	 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		 mybutton.style.display = "block";
+			mybutton.style.display = "block";
 	 }  else  {
 		if ( !btnTopClicked )	{
 			  mybutton.style.display = "none";

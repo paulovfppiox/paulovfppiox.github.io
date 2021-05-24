@@ -2,7 +2,7 @@ var listaArtigos = [];
 var pdfIcon = "<img src='icones/pdf-icon.png' style='width:2.3em; height:2.8em'/>"
 
 function addPapers( divItemForm, arrayDados )			{
-	
+
 	var nPapers = arrayDados.length;
 	var anosTitulos = [];
 	var j=0;
@@ -16,7 +16,7 @@ function addPapers( divItemForm, arrayDados )			{
 			  divItemForm.appendChild( paragAno );
 			  
 			  anosTitulos[j++] = arrayDados[i].ano;
-			  console.log(anosTitulos);
+			  // console.log(anosTitulos);
 		 }
 		
 		var paperTxt = document.createElement('p'); // createElement('p')  // paragraph
