@@ -12,6 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="javascript/website_librarie.js"></script>
+  <script type="text/javascript" src="javascript/simcec_animation.js"></script>
   
   <style>
 	#overlay {
@@ -255,12 +256,17 @@
 <!-- SOBRE -->
 <div class="container-fluid bg-3 text-center">    
 
-	<center><object data="teste/eletrocardio.html" width="100%" height="100%"> 
-    Your browser doesn’t support the object tag. 
-	</object></center>
+	<!-- <canvas id="ecg" width="400" height="200" style="border: 1px solid rgb(204, 204, 204); border-radius: 5px; width: 400px; height: 200px;">-->
+	<canvas id="ecg" width="400" height="200" style="border-style: none; width: 400px; height: 200px;">
+        HTML5 Canvas not supported
+	</canvas>
+	<br>
+	<!-- Logo --> 
+	<object data="content/simcec-neon.html?n=2" width="400" height="150" style="border-radius: 50px;">
+	</object>
 
   <h3 id="sobre" class="anim" >
-	<img src="logos/simcec_logo.png" style="width:4em; height:1.8em"/></br> Simulador para o Treinamento e <br> Avaliação Colaborativa de Equipes Cirúrgicas
+	Simulador para o Treinamento e <br> Avaliação Colaborativa de Equipes Cirúrgicas
   </h3>
   <br>
   <div class="row">
@@ -420,10 +426,10 @@
 	  <div class="sobre textoNormal">
 	    <p class="textoNormal">
 		<center>
-			<img src="logos/cnpq_logo.png"    style="width:10%; height:10%"/>
-			<img src="logos/labteve_logo.png" style="width:10%; height:10%"/>
-			<img src="logos/capes_logo.png"   style="width:10%; height:10%"/>
-			<img src="logos/ufpb_logo.png"    style="width:10%; height:10%"/>
+			<img src="logos/cnpq_logo.png"    style="width:10em; height:5em"/>&nbsp;&nbsp;
+			<img src="logos/labteve_logo.png" style="width:8em; height:8em"/>&nbsp;
+			<img src="logos/capes_logo.png"   style="width:8em; height:8em"/>&nbsp;
+			<img src="logos/ufpb_logo.png"    style="width:8em; height:8em"/>&nbsp;
 		</center>
 		</p>
 	  </div>

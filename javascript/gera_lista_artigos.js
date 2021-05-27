@@ -30,7 +30,7 @@ function addPapers( divItemForm, arrayDados )			{
 function formataCitacao( dados )	{
 	for( i=0; i<dados.length; i++ )	{
 		// console.log( dados[i].ano + ", " + dados[i].autores + ", " + dados[i].titulo + ", " + dados[i].publicacao );	
-		listaArtigos[ i ] = (i+1) + ". " + pdfIcon;
+		listaArtigos[ i ] = (i+1) + ". " + pdfIcon + "&nbsp;";
 		listaArtigos[ i ] += dados[i].autores + " (" + dados[i].ano + ") ";
 		listaArtigos[ i ] += "<b>" + dados[i].titulo + "</b> " + dados[i].publicacao;
 	}
